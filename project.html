@@ -15,31 +15,51 @@
     "baner baner"
     "menu menu"
     "blog column"
-    "stopka stopka"
-    margin: 0;
+    "stopka stopka";
+    max-width: 1200px;
+    margin: 0 auto;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
   }
 
   header {
+    grid-area: baner;
     background-color: olivedrab ;
   }
 
   nav {
-    background-color: #45e;
+    grid-area: menu;
+    background-color: black;
   }
 
   main {
+    grid-area: blog;
     background-color: #a55;
   }
 
   aside {
+    grid-area: column;
     background-color: #6a1;
   }
 
   footer {
+    grid-area: stopka;
     background-color: #c77;
   }
+
+  @media (max-width: 1024px) {
+    body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 300px 1fr 200px 50px;
+    grid-template-areas: 
+    "menu"
+    "baner"
+    "blog"
+     "column"
+    "stopka";
+  }
+}
+
  </style>
 </head>
 
